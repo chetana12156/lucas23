@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Lucas 23 💚💖</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<audio id="bgMusic" loop>
+  <source src="music.mp3" type="audio/mpeg">
+</audio>
+
+<!-- Floating flower emojis -->
+<div class="flower-emojis"></div>
+
+<div class="container">
+
+  <!-- Slide 1 -->
+  <div class="slide active">
+    <h1>happyyyyyy birthdayyyyy my favv unc 😽😽😽</h1>
+    <button class="next">Next</button>
+  </div>
+
+  <!-- Slide 2 -->
+  <div class="slide">
+    <h2>i’d abandon my love for red velvet</h2>
+    <p>if i get coconut ice cream with you forever 😽</p>
+    <button class="prev">Prev</button>
+    <button class="next">Next</button>
+  </div>
+
+  <!-- Slide 3: Math Trivia -->
+  <div class="slide">
+    <h2>Math trivia 😼</h2>
+    <p>9 × 6 + 9 + 6 = ?</p>
+    <button class="answer" data-correct="true">69</button>
+    <button class="answer">75</button>
+    <p class="feedback"></p>
+    <button class="prev">Prev</button>
+    <button class="next">Next</button>
+  </div>
+
+  <!-- Slide 4: Monster Nights -->
+  <div class="slide">
+    <h2>Monster nights 💚</h2>
+    <p>One day we’ll build shelves in our house<br>just for your Monster collection 😽</p>
+    <button class="prev">Prev</button>
+    <button class="next">Next</button>
+  </div>
+
+  <!-- Slide 5: Flag Trivia -->
+  <div class="slide">
+    <h2>Flag trivia 🇬🇷</h2>
+    <img src="greece-map.png" width="200">
+    <p>Which is correct?</p>
+    <button class="answer" data-correct="true">gresse</button>
+    <button class="answer">greece</button>
+    <p class="feedback"></p>
+    <button class="prev">Prev</button>
+    <button class="next">Next</button>
+  </div>
+
+  <!-- Slide 6: Austria & Iceland -->
+  <div class="slide">
+    <h2>Austria & Iceland ❄️</h2>
+    <p>Cold air, warm hands,<br>you and me exploring the world 😽</p>
+    <button class="prev">Prev</button>
+    <button class="next">Next</button>
+  </div>
+
+  <!-- Slide 7: Unscramble -->
+  <div class="slide">
+    <h2>Unscramble 😼</h2>
+    <p>nrevyw</p>
+    <input id="unscramble">
+    <button onclick="checkUnscramble()">Check</button>
+    <p class="feedback"></p>
+    <button class="prev">Prev</button>
+    <button class="next">Next</button>
+  </div>
+
+  <!-- Slide 8: Captcha -->
+  <div class="slide">
+    <h2>Captcha</h2>
+    <input id="captcha" placeholder="aeiouy">
+    <button onclick="checkCaptcha()">Verify</button>
+    <p class="feedback"></p>
+    <button class="prev">Prev</button>
+    <button class="next">Next</button>
+  </div>
+
+  <!-- Slide 9: Element Trivia -->
+  <div class="slide">
+    <h2>Element trivia ⚛️</h2>
+    <p>Symbol for Nitrogen?</p>
+    <button class="answer" data-correct="true">Ngt</button>
+    <button class="answer">N</button>
+    <p class="feedback"></p>
+    <button class="prev">Prev</button>
+    <button class="next">Next</button>
+  </div>
+
+  <!-- Slide 10: Birthday Message -->
+  <div class="slide">
+    <h2>Happy 23rd Birthday, Lucas 💚</h2>
+    <p>My calm. My chaos.<br>Thank you for being you 😽</p>
+    <button class="prev">Prev</button>
+    <button class="next">Next</button>
+  </div>
+
+  <!-- Slide 11: Valentine Slide -->
+  <div class="slide">
+    <h2>Will you be my Valentine forever? 😽</h2>
+    <img src="orange-cat.png" class="valentine-cat" alt="Orange Cat">
+    <button id="yesBtn">YES</button>
+    <button id="yesChittiBtn">YES CHITTI</button>
+    <button class="prev">Prev</button>
+  </div>
+
+  <!-- Slide 12: Happy Cat Video -->
+  <div class="slide">
+    <div class="video-container">
+      <video src="happi.mp4" autoplay loop muted></video>
+    </div>
+    <p class="video-text">me when it’s us 😸</p>
+    <button class="prev">Prev</button>
+    <button class="next">Next</button>
+  </div>
+
+  <!-- Slide 13: Minecraft Meme -->
+  <div class="slide">
+    <img src="minecraft-meme.png" width="300" alt="Minecraft Meme">
+    <button class="prev">Prev</button>
+  </div>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

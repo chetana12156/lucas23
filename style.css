@@ -1,0 +1,95 @@
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: "Poppins", Arial, sans-serif;
+  overflow: hidden;
+  height: 100vh;
+  background: linear-gradient(135deg, #c6f6d5, #ffd1e0);
+  background-size: 400% 400%;
+  animation: gradientMove 15s ease infinite;
+}
+
+@keyframes gradientMove {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.flower-emojis {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 0;
+  overflow: hidden;
+}
+
+.emoji {
+  position: absolute;
+  opacity: 0.8;
+  animation: floatUp linear infinite;
+}
+
+@keyframes floatUp {
+  0% { transform: translateY(100vh) translateX(0) rotate(0deg); opacity: 0; }
+  10% { opacity: 1; }
+  100% { transform: translateY(-50px) translateX(30px) rotate(360deg); opacity: 0; }
+}
+
+.container {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.slide {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 30px;
+  animation: fade 0.5s ease;
+  position: relative;
+  z-index: 1;
+}
+
+.slide.active { display: flex; }
+
+h1 { color: #2f6f4e; font-size: 3rem; font-weight: 700; margin: 0.5em 0; }
+h2 { color: #2f6f4e; font-size: 2.2rem; font-weight: 600; margin: 0.5em 0; }
+p { font-size: 20px; max-width: 600px; line-height: 1.4; }
+
+button {
+  margin: 12px;
+  padding: 12px 28px;
+  border-radius: 30px;
+  border: none;
+  background: #9be3a7;
+  font-size: 16px;
+  cursor: pointer;
+  transition: transform 0.2s, background 0.2s;
+}
+button:hover { transform: scale(1.08); background: #7fd693; }
+
+.feedback { margin-top: 10px; font-size: 18px; }
+input { padding: 10px; border-radius: 20px; border: 1px solid #ccc; text-align: center; font-size: 16px; }
+
+.video-container { width: 300px; height: 200px; overflow: hidden; border-radius: 20px; }
+.video-container video { width: 100%; height: auto; transform: translateY(-20px); }
+.video-text { margin-top: 10px; font-size: 20px; animation: pop 0.5s ease forwards; }
+
+.valentine-cat { width: 180px; margin: 15px 0; animation: wiggle 1s ease infinite; }
+
+@keyframes wiggle {
+  0% { transform: rotate(-5deg); }
+  50% { transform: rotate(5deg); }
+  100% { transform: rotate(0deg); }
+}
+
+@keyframes fade { from { opacity: 0; transform: scale(0.96); } to { opacity: 1; transform: scale(1); } }
+@keyframes pop { 0% { transform: scale(0.8); opacity: 0; } 100% { transform: scale(1); opacity: 1; } }
